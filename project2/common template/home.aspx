@@ -244,8 +244,20 @@
                 <li><a href="#intelWorkspace">Resource Hub</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
-        </nav>
+            <div style="
+      background:#2563eb;
+      padding:8px 18px;
+      border-radius:20px;
+      border:1px solid #ddd;
+      font-weight:600;
+      color:white;">
 
+     
+      <asp:Label ID="lblRole" runat="server"></asp:Label>
+
+  </div>
+        </nav>
+            
         <div class="main-container">
             <div class="info-panel">
                 <div class="hero-text">

@@ -4,15 +4,18 @@ using System.Web.UI.WebControls;
 public partial class home : System.Web.UI.Page
 {
     BAL_Home objBAL = new BAL_Home();
-
     protected void Page_Load(object sender, EventArgs e)
-    {
-        if (!IsPostBack)
-        {
-            BindStates();
-        }
-    }
+ {
+     if (!IsPostBack)
+     {
+         if (Session["role"] != null)
+         {
+             lblRole.Text = Session["role"].ToString();
+         }
 
+         BindStates();
+     }
+ }
     private void BindStates()
     {
         DataTable dt = objBAL.GetStates();
