@@ -6,13 +6,23 @@ public partial class home : System.Web.UI.Page
 {
     BAL_Home objBAL = new BAL_Home();
 
-    protected void Page_Load(object sender, EventArgs e)
+   protected void Page_Load(object sender, EventArgs e)
+{
+    if (!IsPostBack)
     {
-        if (!IsPostBack)
+        if (Session["role"] != null)
         {
-            // optional initial load
+            lblRole.Text = Session["role"].ToString();
+
+            string role = Session["role"].ToString();
+
+            if (role != "Admin")
+            {
+                gvAssets.Columns[5].Visible = false;
+            }
         }
     }
+}
 
     // ✅ SINGLE btnSubmit_Click (merged logic)
     protected void btnSubmit_Click(object sender, EventArgs e)

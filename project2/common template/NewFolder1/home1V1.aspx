@@ -202,7 +202,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body>
 <form id="form1" runat="server">
+<div style="
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;">
 
+    <div style="
+        background:#ffffff;
+        padding:8px 15px;
+        border-radius:20px;
+        border:1px solid #ddd;
+        font-weight:600;
+        color:#0f172a;">
+
+        <asp:Label ID="lblRole" runat="server"></asp:Label>
+
+    </div>
+
+</div>
 <!-- ================= MAIN CONTAINER ================= -->
 <div class="main-container">
 
